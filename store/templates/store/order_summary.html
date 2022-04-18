@@ -38,13 +38,13 @@
           <td>{{ order_item.quantity }}</td>
           <td class="quantity-column">
             <button class="edit-button">
-              <a href="{% url 'plantastore:add-to-cart' order_item.item.pk %}"
+              <a href="{% url 'store:add-to-cart' order_item.item.pk %}"
                 >+</a
               >
             </button>
             <button class="edit-button">
               <a
-                href="{% url 'plantastore:reduce-quantity-item' order_item.item.pk %}"
+                href="{% url 'store:reduce-quantity-item' order_item.item.pk %}"
                 >-</a
               >
             </button>
@@ -57,7 +57,7 @@
             >
             {% else %} ${{ order_item.get_total_item_price }} {% endif %}
             <a
-              href="{% url 'plantastore:remove-from-cart' order_item.item.pk %}"
+              href="{% url 'store:remove-from-cart' order_item.item.pk %}"
             >
             </a>
           </td>
