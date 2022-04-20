@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+main {
+  align-items: center;
+  /* background-color: blanchedalmond; */
+}
+
+/* Latest Blog post */
+.new-post-container {
+  position: relative;
+  margin: 20px;
+  width: 90%;
+  height: 40%;
+  margin: 30px;
+  left: 15px;
+  /* border: 1px solid black; */
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* background-color: aqua; */
+}
+
+.new-card-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  /* background-color: lightgreen; */
+  height: 100%;
+  justify-content: center;
+}
+
+.new-card-col {
+  /* border: 1px solid rgb(222, 36, 36); */
+  align-items: center;
+
+  margin: 10px;
+}
+
+.new-card-col.img {
+  width: 450px;
+}
+.new-card-col.post {
+  width: 250px;
+}
+.new-card-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  margin: 5px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  display: block;
+  right: 0px;
+}
+
+.new-card-details {
+  padding: 10px;
+}
+
+span {
+  color: grey;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+}
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+}
+
+/* Latest Blog post */
+
+/* Blog post Rows */
+
+/* Blog post Rows */

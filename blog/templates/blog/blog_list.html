@@ -1,31 +1,31 @@
-  {% extends "base.html" %}
-  {% load static %}
-  {% block content %}
-  <link rel="stylesheet" href="{%  static  'css/blog-detail.css'  %}" />
+{% extends "base.html" %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{%  static  'css/blog-detail.css'  %}" />
 
+<main>
   <!-- Page content -->
-<h1>Planta Blog</h1>
+  <h1>Planta Blog</h1>
   <!-- Latest Blog Section  -->
   <div class="new-post-container">
-    <div class="new-blog-card">
-      <div class="new-card">
-         <a href="">
-            <img
-          class="card-image"
-          src="{{ latestpost.img.url }}"
-          alt="blog-image">
-          </a>
-        <div class="new-post-details">
+    <div class="new-card-row">
+      <div class="new-card-col img">
+        <a href="">
+          <img
+            class="new-card-image"
+            src="{{ latestpost.img.url }}"
+            alt="blog-image"
+          />
+        </a>
+      </div>
+
+      <div class="new-card-col post">
+        <div class="new-card-details">
           <span>{{ latestpost.created_on }}</span>
           <h2 class="card-title">{{ latestpost.title }}</h2>
           <p class="card-category">{{ latestpost.category }}</p>
-
         </div>
-
       </div>
     </div>
   </div>
-
 
   <!-- Latest Blog Section  -->
 
@@ -33,30 +33,25 @@
   <div class="post-container">
     <div class="blog-card-rows">
       {% for post in posts %}
-        <!-- Blog card-->
+      <!-- Blog card-->
       <div class="blog-card">
         <div class="card">
           <a href="">
-            <img
-          class="card-image"
-          src="{{ post.img.url }}"
-          alt="blog-image">
+            <img class="card-image" src="{{ post.img.url }}" alt="blog-image" />
           </a>
           <span>{{ post.created_on }}</span>
           <h2 class="card-title">{{ post.title }}</h2>
           <p class="card-category">{{ post.category }}</p>
         </div>
       </div>
-        <!-- Blog card-->
-            {% endfor %}
-
+      <!-- Blog card-->
+      {% endfor %}
     </div>
-
   </div>
 
   <!-- Blog List -->
 
-
   <!-- Page content -->
+</main>
 
 {% endblock %}
