@@ -42,9 +42,6 @@ class ProductDetailView(ProductObjectMixin, View):
         return render(request, self.template_name, context)
 
 
-class PlantaStoreHomeView(ProductObjectMixin):
-    pass
-
 
 class ProductListView(View):
     template_name = "store/product_list2.html"
@@ -79,7 +76,7 @@ class OrderSummaryView(LoginRequiredMixin, View):
             return redirect("/")
 
 
-@login_required
+
 def add_to_cart(request, pk):
     """This function will add your product to OrderItem database and add detail order to Order database"""
 
@@ -111,7 +108,6 @@ def add_to_cart(request, pk):
         return redirect("store:order-summary")
 
 
-@login_required
 def remove_from_cart(request, pk):
     item = get_object_or_404(Item, pk=pk)
     order_qs = Order.objects.filter(
@@ -138,7 +134,6 @@ def remove_from_cart(request, pk):
         return redirect("store:order-summary", pk=pk)
 
 
-@login_required
 def reduce_quantity_item(request, pk):
     item = get_object_or_404(Item, pk=pk)
     order_qs = Order.objects.filter(

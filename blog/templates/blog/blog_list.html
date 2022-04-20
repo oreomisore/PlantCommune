@@ -1,0 +1,62 @@
+  {% extends "base.html" %}
+  {% load static %}
+  {% block content %}
+  <link rel="stylesheet" href="{%  static  'css/blog-detail.css'  %}" />
+
+  <!-- Page content -->
+<h1>Planta Blog</h1>
+  <!-- Latest Blog Section  -->
+  <div class="new-post-container">
+    <div class="new-blog-card">
+      <div class="new-card">
+         <a href="">
+            <img
+          class="card-image"
+          src="{{ latestpost.img.url }}"
+          alt="blog-image">
+          </a>
+        <div class="new-post-details">
+          <span>{{ latestpost.created_on }}</span>
+          <h2 class="card-title">{{ latestpost.title }}</h2>
+          <p class="card-category">{{ latestpost.category }}</p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Latest Blog Section  -->
+
+  <!-- Blog List -->
+  <div class="post-container">
+    <div class="blog-card-rows">
+      {% for post in posts %}
+        <!-- Blog card-->
+      <div class="blog-card">
+        <div class="card">
+          <a href="">
+            <img
+          class="card-image"
+          src="{{ post.img.url }}"
+          alt="blog-image">
+          </a>
+          <span>{{ post.created_on }}</span>
+          <h2 class="card-title">{{ post.title }}</h2>
+          <p class="card-category">{{ post.category }}</p>
+        </div>
+      </div>
+        <!-- Blog card-->
+            {% endfor %}
+
+    </div>
+
+  </div>
+
+  <!-- Blog List -->
+
+
+  <!-- Page content -->
+
+{% endblock %}
