@@ -3,18 +3,22 @@
 main {
   align-items: center;
   /* background-color: blanchedalmond; */
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+}
 /* Latest Blog post */
 .new-post-container {
   position: relative;
   margin: 20px;
   width: 90%;
   height: 40%;
-  margin: 30px;
+  margin: 60px;
   left: 15px;
   /* border: 1px solid black; */
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* background-color: aqua; */
 }
@@ -25,7 +29,7 @@ main {
   flex-direction: row;
   /* background-color: lightgreen; */
   height: 100%;
-  justify-content: center;
+  justify-content: left;
 }
 
 .new-card-col {
@@ -50,18 +54,19 @@ main {
   margin-right: auto; */
   display: block;
   right: 0px;
+  object-fit: cover;
 }
 
 .new-card-details {
   padding: 10px;
 }
 
-span {
+.card-date.new {
   color: grey;
   font-family: "Montserrat", sans-serif;
   font-size: 10px;
 }
-h2 {
+.card-title.new {
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
 }
@@ -69,5 +74,66 @@ h2 {
 /* Latest Blog post */
 
 /* Blog post Rows */
+.post-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
 
+.blog-card-rows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-family: "Rajdhani", sans-serif;
+  overflow: hidden;
+  width: fit-content;
+  height: fit-content;
+  float: left;
+  padding: 0;
+}
+
+.blog-card {
+  /* border: 1px solid rgb(36, 28, 119); */
+  width: 320px;
+  height: 380px;
+  margin: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* border: 1px solid rgb(27, 95, 151); */
+}
+
+.card-image {
+  width: 250px;
+  height: 150px;
+  padding: 15px;
+  margin: 5px;
+  border: 1px black;
+  border-radius: 20px;
+  object-fit: cover;
+  /* border: 1px solid red; */
+  display: inline-block;
+  /* display: inline-block; */
+}
+
+.card-details {
+  /* border: 1px solid rgb(115, 255, 0); */
+  border-radius: 10px;
+  width: 300px;
+  display: inline-block;
+  margin: 5px;
+}
+.card-date {
+  color: grey;
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+}
+
+.card-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
 /* Blog post Rows */

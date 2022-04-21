@@ -19,9 +19,9 @@
 
       <div class="new-card-col post">
         <div class="new-card-details">
-          <span>{{ latestpost.created_on }}</span>
-          <h2 class="card-title">{{ latestpost.title }}</h2>
-          <p class="card-category">{{ latestpost.category }}</p>
+          <span class="card-date new">{{ latestpost.created_on }}</span>
+          <h2 class="card-title new">{{ latestpost.title }}</h2>
+          <p class="card-category new">{{ latestpost.category }}</p>
         </div>
       </div>
     </div>
@@ -39,9 +39,11 @@
           <a href="">
             <img class="card-image" src="{{ post.img.url }}" alt="blog-image" />
           </a>
-          <span>{{ post.created_on }}</span>
-          <h2 class="card-title">{{ post.title }}</h2>
-          <p class="card-category">{{ post.category }}</p>
+          <div class="card-details">
+            <span class="card-date">{{ post.created_on }}</span>
+            <h2 class="card-title">{{ post.title }}</h2>
+            <p class="card-category">{{ post.category }}</p>
+          </div>
         </div>
       </div>
       <!-- Blog card-->
