@@ -36,7 +36,7 @@ class PostObjectMixin(object):
 
 
 class PostDetailView(PostObjectMixin, View):
-    template_name = 'blog/blog_detail'
+    template_name = 'blog/blog_detail.html'
 
     def get(self, request, pk=None, *args, **kwargs):
         # GET METHOD
